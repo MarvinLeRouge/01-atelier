@@ -1,5 +1,6 @@
 import express from "express";
-import router from "./routes/bookRoutes.js";
+import bookRouter from "./routes/bookRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 
 
 const API_VERSION = "v1"
@@ -38,7 +39,8 @@ const getFormatedDate = () => {
 };
 
 // Routes
-app.use(`/api/${API_VERSION}`, router);
+app.use(`/api/${API_VERSION}/book`, bookRouter);
+app.use(`/api/${API_VERSION}/user`, userRouter);
 
 // Lancement
 console.clear();
