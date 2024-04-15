@@ -1,11 +1,14 @@
 import express from "express";
+import bodyParser from "body-parser"
 import bookRouter from "./routes/bookRoutes.js";
 import userRouter from "./routes/userRoutes.js";
-
 
 const API_VERSION = "v1"
 const port = 8000;
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /**
  * var router = express.Router()
