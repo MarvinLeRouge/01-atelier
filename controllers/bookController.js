@@ -10,7 +10,7 @@ const controller = {
     },
     create: (req, res) => {
         console.log("request", req.body)
-        res.status(201).json(req.body);
+        res.status(201).json({"label1":"val1"});
     }
 }
 

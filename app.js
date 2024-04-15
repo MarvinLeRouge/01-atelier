@@ -45,5 +45,5 @@ app.use(`/api/${API_VERSION}/user`, userRouter);
 // Lancement
 console.clear();
 app.listen(port, () => {
-    console.log('Listening on port ' + port);
+    console.log("Listening");
 });
